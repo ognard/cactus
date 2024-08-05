@@ -2,7 +2,7 @@
 <html lang="{{ .Site.LanguageCode }}">
 {{ partial "head.html" . }}
 <body class="max-width mx-auto px3 ltr">
-  <div class="content index py4">
+  <div class="content index post-content">
 
   {{ partial "page_nav.html" . }}
 
@@ -82,6 +82,15 @@
 
   {{ partial "page_nav_mobile.html" . }}
 
+  <script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '1051580');
+  </script>
+  <!-- End MailerLite Universal -->
+  <div class="ml-embedded ml-custom" data-form="s0CRWB"></div>
   {{ partial "footer.html" . }}
 
   </div>
@@ -114,4 +123,5 @@
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
 </script>
 {{ end }}
+
 </html>

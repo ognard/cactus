@@ -18,6 +18,10 @@ h1, h2, h3, .h1, .h2, .h3, #header #nav ul a {
 	text-decoration: none;
 }
 .content.index {
+	padding-top: 20px;
+	padding-bottom: 80px;
+}
+.content.post-content {
 	padding-top: 80px;
 	padding-bottom: 80px;
 }
@@ -93,4 +97,65 @@ blockquote {
 }
 blockquote > p {
 	margin: 0px;
+}
+
+.ml-custom {
+	position: fixed;
+	bottom: 0px;
+	right: 0px;
+}
+@media screen and (max-width: 1540px) {
+	.ml-custom {
+		margin-top: 40px;
+		position: relative;
+		border-top: 1px dashed #2b824a;
+	}
+}
+.ml-subscribe-form h4 {
+	font-family: "JetBrains Mono",monospace !important;
+	font-size: 20px !important;
+	margin-bottom: 0px !important;
+}
+.ml-subscribe-form p {
+	font-family: "JetBrains Mono",monospace !important;
+	font-size: 13px !important;
+}
+.ml-form-formContent {
+	margin-bottom: 5px !important;
+}
+
+.ml-field-group > input {
+	border: 1px dashed #2b824a !important;
+	border-style: dashed !important;
+	outline: none;
+	font-family: "JetBrains Mono",monospace !important;
+	font-size: 13px !important;
+	text-align: center !important;
+}
+@media screen and (max-width: 480px) {
+	#header #nav ul li.icon {
+	  position: absolute;
+	  top: 35px;
+	  right: 10px;
+	  display: inline-block;
+	  margin-right: 0px;
+	}
+  }
+
+a.post-logo {
+	position: fixed;
+	left: 20px;
+	top: 18px;
+	width: 50px;
+	height: 50px;
+	background-size: 100% !important;
+	border-radius: 5px;
+}
+#header-post {
+	top: 28px;
+}
+
+.tryhackme-link {
+	font-weight: 900;
+	font-size: 13px;
 }

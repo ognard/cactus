@@ -69,9 +69,11 @@ $(document).ready(function() {
         // icon" instead
         if ( ! $( "#menu-icon" ).is(":visible") && topDistance < 50 ) {
           $("#menu-icon-tablet").show();
+          $(".post-logo").show();
           $("#top-icon-tablet").hide();
-        } else if (! $( "#menu-icon" ).is(":visible") && topDistance > 100) {
+        } else if (! $( "#menu-icon" ).is(":visible") && topDistance > 50) {
           $("#menu-icon-tablet").hide();
+          $(".post-logo").hide();
           $("#top-icon-tablet").show();
         }
       });
