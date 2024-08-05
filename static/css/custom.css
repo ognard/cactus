@@ -19,7 +19,7 @@ h1, h2, h3, .h1, .h2, .h3, #header #nav ul a {
 }
 .content.index {
 	padding-top: 80px;
-	padding-bottom: 40px;
+	padding-bottom: 80px;
 }
 .content a {
 	text-decoration: none;
