@@ -71,6 +71,7 @@
     float: right;
     margin-right: 2rem;
     margin-left: 15px;
+    margin-top: 2px;
 
     &:hover {
       color: $color-accent-1;
@@ -201,11 +202,6 @@
       display: none;
     }
 // smartphone + phapblet
-  }
-}
-@media screen and (max-width: 500px) {
-  #header-post {
-    display: none;
   }
 }
 
