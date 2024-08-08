@@ -48,7 +48,7 @@
   </section>
 
   <section id="writing">
-    <span class="h2"><a href="{{ .Site.Params.mainSection | absURL }}">{{ .Site.Params.mainSectionTitle | default "Writings" }}</a></span>
+    <span class="h2">{{ .Site.Params.mainSectionTitle | default "Writings" }}</span>
     {{ if (and (and (isset .Site.Params "tagsoverview") (eq .Site.Params.tagsOverview true)) (gt (len .Site.Taxonomies.tags) 0)) }}
     <span class="h3">Topics</span>
     <span class="widget tagcloud">
@@ -96,6 +96,29 @@
     {{ end }}
   </section>
 
+  {{ $showCertsList := false }}
+  {{ if (isset .Site.Params "showcertslist") }}
+    {{ $showCertsList = .Site.Params.showCertsList }}
+  {{ else if .Site.Data.certs }}
+    {{ $showCertsList = true }}
+  {{ end }}
+  {{ if $showCertsList }}
+    {{ $certUrl := "#" }}
+    {{ if isset .Site.Params "certsurl" }}
+      {{ $certsUrl = .Site.Params.certsUrl }}
+    {{ end }}
+  <section id="projects">
+    <span class="h2">{{ .Site.Params.certsSectionTitle | default "Certificates" }}</span>
+    <ul class="project-list">
+        {{ range .Site.Data.certs.list }}
+        <li class="project-item">
+          <a href="{{ .url }}" target="_blank">{{ .name }}</a> {{ .desc | markdownify }}
+        </li>
+        {{ end }}
+    </ul>
+  </section>
+  {{ end }}
+  
   {{ $showProjectsList := false }}
   {{ if (isset .Site.Params "showprojectslist") }}
     {{ $showProjectsList = .Site.Params.showProjectsList }}
@@ -108,17 +131,19 @@
       {{ $projectsUrl = .Site.Params.projectsUrl }}
     {{ end }}
   <section id="projects">
-    <span class="h1"><a href="{{ $projectsUrl }}">Projects</a></span>
+    <span class="h2">{{ .Site.Params.projectsSectionTitle | default "Projects" }}</span>
     <ul class="project-list">
         {{ range .Site.Data.projects.list }}
         <li class="project-item">
-          <a href="{{ .url }}">{{ .name }}</a>: {{ .desc | markdownify }}
+          <a href="{{ .url }}" target="_blank">{{ .name }}</a> {{ .desc | markdownify }}
         </li>
         {{ end }}
     </ul>
   </section>
   {{ end }}
-  <!-- MailerLite Universal -->
+
+  
+<!-- MailerLite Universal -->
 <script>
   (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
   .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
