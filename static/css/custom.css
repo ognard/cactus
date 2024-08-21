@@ -72,6 +72,7 @@ p code {
 }
 pre code {
 	text-wrap: wrap;
+	color: #4ee682 !important;
 }
 @media screen and (max-width: 768px) {
 	pre code {
